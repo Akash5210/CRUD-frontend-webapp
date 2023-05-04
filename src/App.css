@@ -1,0 +1,148 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow:hidden ;
+}
+.bgPark-img{
+  /* z-index: -1;
+  position: absolute;
+  top: 0;
+  width: 100%; */
+  height: 100%;
+  object-fit: fill;
+  
+}
+
+/* .........leaf image animation start............... */
+.set{
+  position:absolute ;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  pointer-events:none;
+}
+.set img{
+  width: 3rem;
+}
+ .set div{
+  position:absolute ;
+  z-index: 2;
+  display:block ;
+}
+ .set div:nth-child(1){
+  left:20%;
+  animation:animate 15s linear infinite ;
+  animation-delay:-7s;
+}
+ .set div:nth-child(2){
+  left:50%;
+  animation:animate 20s linear infinite ;
+  animation-delay:-5s;
+}
+ .set div:nth-child(3){
+  left:70%;
+  animation:animate 20s linear infinite ;
+  animation-delay:0s;
+}
+ .set div:nth-child(4){
+  left:0%;
+  animation:animate 15s linear infinite ;
+  animation-delay:-5s;
+}
+ .set div:nth-child(5){
+  left:85%;
+  animation:animate 18s linear infinite ;
+  animation-delay:-10s;
+}
+ .set div:nth-child(6){
+  left:20%;
+  animation:animate 15s linear infinite ;
+  animation-delay:-7s;
+}
+ .set div:nth-child(7){
+  left:0%;
+  animation:animate 12s linear infinite ;
+  
+}
+ .set div:nth-child(8){
+  left:60%;
+  animation:animate 15s linear infinite ;
+}
+@keyframes animate{
+  0%{
+    opacity:0;
+    top: -10%;
+    transform:translateX(20px) rotate(0deg);
+  }
+  10%{
+    opacity:1;
+  }
+  20%{
+    transform:translateX(-20px) rotate(45deg);
+  }
+  40%{
+    transform:translateX(-20px) rotate(90deg);
+  }
+  60%{
+    transform:translateX(20px) rotate(180deg);
+  }
+  80%{
+    transform:translateX(-20px) rotate(180deg);
+  }
+  100%{
+    top: 110%;
+    transform:translateX(-20px) rotate(225deg);
+  }
+}
+/* .........leaf image animation end............... */
+
+
+/*-----------      signup page   ---------  */
+.signup-page, .login-page, .show-data{
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.container{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#fullName:valid, #email:valid, #zip:valid,#contact:valid{
+  border: 2px solid rgb(19, 236, 19);
+}
+#fullName:invalid{
+  /* border: 2px solid red; */
+}
+
+/*     show data-page */
+.show-data{
+  margin-top: 20px;
+}
+
+
+/* ******    Login page    ********** */
+.login-page{
+  margin-top: 4rem;
+  padding: 3rem 3rem;
+  max-width: 24rem;
+}
+.login .form-control{
+  padding: 0.475rem 0.75rem;
+  border: var(--bs-border-width) solid #fff;
+}
+.login{
+  --bs-btn-bg: #9f5b2a;
+  --bs-btn-border-color: none;
+}
+@media only screen and (max-width: 980px) {
+  .login-page{
+    margin-top: 3rem;
+    padding: 2rem 2rem;
+    width: 20rem;
+  }
+  
+}
